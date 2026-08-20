@@ -37,7 +37,7 @@ export default function Home() {
             <p className="eyebrow">EST. 2019 • COMMUNITY-DRIVEN ROLEPLAY</p>
 
             <h1>
-              BEAR OPEN WORLD
+              KOD4BR UNITED
               <span>ROLEPLAY</span>
             </h1>
 
@@ -74,7 +74,7 @@ export default function Home() {
 
           <div>
             <p className="section-text">
-              Bear Open World Roleplay is a community focused on creating
+              KOD4BR United Roleplay is a community focused on creating
               realistic, immersive, and enjoyable roleplay experiences. From
               emergency services to civilian operations, every member has an
               opportunity to contribute to the story.
@@ -157,12 +157,12 @@ export default function Home() {
           </h2>
 
           <p>
-            Join Bear Open World Roleplay and become part of a community
+            Join kod4br united roleplay today and become part of a community
             dedicated to creating memorable roleplay experiences.
           </p>
 
           <Link href="#" className="button button-primary">
-            Join Bear Open World Roleplay
+            Join KOD4BR United Roleplay
           </Link>
         </div>
       </section>

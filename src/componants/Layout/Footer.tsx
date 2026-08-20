@@ -8,6 +8,7 @@ const footerLinks = [
   { name: "Community Rules", href: "/rules" },
   { name: "FAQ", href: "/faq" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Docket", href: "/docket" },
 ];
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
             <div className="footer-logo-mark">B</div>
 
             <div>
-              <strong>BEAR OPEN WORLD</strong>
+              <strong>KOD4BR United</strong>
               <span>ROLEPLAY</span>
             </div>
           </Link>
@@ -58,11 +59,11 @@ export default function Footer() {
           <h3>Join Our Community</h3>
 
           <p>
-            Ready to become part of Bear Open World Roleplay?
+            Ready to become part of Kod4BR United Roleplay?
           </p>
 
           <Link href="/contact" className="button button-primary">
-            Join BOWRP
+            Join K4BRURP
           </Link>
         </div>
       </div>
@@ -70,7 +71,7 @@ export default function Footer() {
       <div className="footer-bottom">
         <div className="container footer-bottom-content">
           <p>
-            © {new Date().getFullYear()} Bear Open World Roleplay. All rights
+            © {new Date().getFullYear()} KOD4BR United Roleplay. All rights
             reserved.
           </p>
 

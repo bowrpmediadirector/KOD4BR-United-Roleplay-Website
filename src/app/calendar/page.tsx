@@ -262,7 +262,7 @@ export default function CalendarPage() {
 
           <h2>
             Be Part of
-            <span>BOWRP.</span>
+            <span>K4BRURP.</span>
           </h2>
 
           <p>

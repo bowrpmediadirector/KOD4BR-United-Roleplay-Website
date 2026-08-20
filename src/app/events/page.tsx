@@ -23,7 +23,7 @@ export default function EventsPage() {
             <span>📅</span>
             <h2>No Upcoming Events</h2>
             <p>
-              Check back soon for upcoming BOWRP events and sessions.
+              Check back soon for upcoming K4BRURP events and sessions.
             </p>
           </div>
         </div>

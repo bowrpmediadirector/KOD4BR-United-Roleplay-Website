@@ -41,13 +41,13 @@ export default function ApplicationsPage() {
           <p className="section-label">JOIN THE TEAM</p>
 
           <h1>
-            BOWRP
+            K4BRURP
             <span>APPLICATIONS.</span>
           </h1>
 
           <p>
             Find an opportunity that fits you and become part of
-            the BOWRP community.
+            the K4BRURP community.
           </p>
         </div>
       </section>

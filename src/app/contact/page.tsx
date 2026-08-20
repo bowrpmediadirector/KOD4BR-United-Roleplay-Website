@@ -27,7 +27,7 @@ export default function ContactPage() {
             </h2>
 
             <p>
-              For the fastest response, contact the BOWRP team through
+              For the fastest response, contact the KOD4BR United Roleplay team through
               our official community Discord.
             </p>
 
@@ -62,7 +62,7 @@ export default function ContactPage() {
             <h3>Staff Assistance</h3>
 
             <p>
-              Need to speak with a member of the BOWRP leadership team?
+              Need to speak with a member of the KOD4BR United Roleplay leadership team?
               Open a support request through our community.
             </p>
           </div>

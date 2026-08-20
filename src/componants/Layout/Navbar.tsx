@@ -48,6 +48,7 @@ const navigation = [
   { name: "Staff", href: "/staff" },
   { name: "Applications", href: "/applications" },
   { name: "Rules", href: "/rules" },
+  { name: "Docket", href: "/docket" },
 ];
 
 export default function Navbar() {

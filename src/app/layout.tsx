@@ -5,9 +5,9 @@ import Navbar from "@/componants/Layout/Navbar";
 import Footer from "@/componants/Layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Bear Open World Roleplay",
+  title: "KOD4BR United Roleplay",
   description:
-    "Bear Open World Roleplay — a professional, community-driven roleplay experience focused on realism, teamwork, and unforgettable stories.",
+    "kod4br united roleplay — a professional, community-driven roleplay experience focused on realism, teamwork, and unforgettable stories.",
 };
 
 export default function RootLayout({

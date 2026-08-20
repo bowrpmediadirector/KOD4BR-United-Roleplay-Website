@@ -11,7 +11,7 @@ export default function AnnouncementsPage() {
           </h1>
 
           <p>
-            Keep up with the latest BOWRP news, updates, and important
+            Keep up with the latest K4BRURP news, updates, and important
             community information.
           </p>
         </div>

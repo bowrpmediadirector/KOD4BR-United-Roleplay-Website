@@ -164,7 +164,7 @@ export default async function DepartmentPage({
 
           <p>
             Become part of {department.name} and help create
-            the next BOWRP story.
+            the next K4BRURP story.
           </p>
 
           <Link

@@ -13,8 +13,8 @@ export default function AboutPage() {
           </h1>
 
           <p>
-            Learn more about Bear Open World Roleplay, our history,
-            our mission, and the community that makes BOWRP possible.
+            Learn more about KOD4BR United Roleplay, our history,
+            our mission, and the community that makes K4BRURP possible.
           </p>
         </div>
       </section>
@@ -32,7 +32,7 @@ export default function AboutPage() {
 
           <div className="section-text">
             <p>
-              Bear Open World Roleplay is a community-driven roleplay
+              KOD4BR United Roleplay is a community-driven roleplay
               organization established in 2019 with the goal of creating
               immersive and enjoyable emergency-services and civilian
               roleplay.
@@ -93,7 +93,7 @@ export default function AboutPage() {
               <h3>Community</h3>
               <p>
                 Every member contributes to the environment and experiences
-                that make BOWRP what it is.
+                that make K4BRURP what it is.
               </p>
             </article>
           </div>
@@ -110,7 +110,7 @@ export default function AboutPage() {
           </h2>
 
           <p>
-            Ready to experience Bear Open World Roleplay?
+            Ready to experience KOD4BR United Roleplay?
           </p>
 
           <Link href="/applications" className="button button-primary">

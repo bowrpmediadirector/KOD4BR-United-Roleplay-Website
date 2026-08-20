@@ -3,7 +3,7 @@ export default function MediaPage() {
     <main className="inner-page">
       <section className="page-hero">
         <div className="container">
-          <p className="section-label">BOWRP MEDIA</p>
+          <p className="section-label">K4BRURP MEDIA</p>
 
           <h1>
             OUR
@@ -12,7 +12,7 @@ export default function MediaPage() {
 
           <p>
             Explore screenshots, videos, community moments, and other
-            BOWRP media.
+            K4BRURP media.
           </p>
         </div>
       </section>
