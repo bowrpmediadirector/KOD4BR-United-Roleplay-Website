@@ -89,7 +89,7 @@ export default function Navbar() {
           </div>
 
           <div className="navbar-brand-text">
-            <strong>BEAR OPEN WORLD</strong>
+            <strong>KOD4BR UNITED</strong>
             <span>ROLEPLAY</span>
           </div>
         </Link>
