@@ -4,72 +4,50 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+const departments = [
+  {
+    name: "Bear Capital City Police Department",
+    abbreviation: "BCCPD",
+    slug: "bear-capital-city-police-department",
+    documents: "https://drive.google.com/",
+    forms: "https://forms.google.com/",
+  },
+  {
+    name: "Bear County Sheriff's Office",
+    abbreviation: "BCSO",
+    slug: "bear-county-sheriffs-office",
+    documents: "https://drive.google.com/",
+    forms: "https://forms.google.com/",
+  },
+  {
+    name: "Bear State Patrol",
+    abbreviation: "BSP",
+    slug: "bear-state-patrol",
+    documents: "https://drive.google.com/",
+    forms: "https://forms.google.com/",
+  },
+  {
+    name: "State of Bear Corrections",
+    abbreviation: "SBC",
+    slug: "state-of-bear-corrections",
+    documents: "https://drive.google.com/",
+    forms: "https://forms.google.com/",
+  },
+  {
+    name: "Bear Metro Fire District",
+    abbreviation: "BMFD",
+    slug: "bear-metro-fire-district",
+    documents: "https://drive.google.com/",
+    forms: "https://forms.google.com/",
+  },
+];
+
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Departments", href: "/departments" },
   { name: "Staff", href: "/staff" },
   { name: "Applications", href: "/applications" },
   { name: "Rules", href: "/rules" },
-  { name: "Advertisement", href: "/advertisement" },
-  { name: "Docket Discord Bot", href: "/docket" },
-];
-
-const departmentSections = [
-  {
-    title: "LAW ENFORCEMENT",
-    departments: [
-      {
-        name: "Bear Capital City Police Department",
-        href: "/departments/bear-capital-city-police-department",
-      },
-      {
-        name: "Bear County Sheriff's Office",
-        href: "/departments/bear-county-sheriffs-office",
-      },
-      {
-        name: "Bear State Patrol",
-        href: "/departments/bear-state-patrol",
-      },
-    ],
-  },
-  {
-    title: "CORRECTIONS",
-    departments: [
-      {
-        name: "State of Bear Corrections",
-        href: "/departments/state-of-bear-corrections",
-      },
-    ],
-  },
-  {
-    title: "FIRE & EMS",
-    departments: [
-      {
-        name: "Bear Metro Fire District",
-        href: "/departments/bear-metro-fire-district",
-      },
-    ],
-  },
-];
-
-const documentLinks = [
-  {
-    name: "Department Handbooks",
-    href: "YOUR_GOOGLE_DOC_URL",
-  },
-  {
-    name: "Policies & Procedures",
-    href: "YOUR_GOOGLE_DOC_URL",
-  },
-  {
-    name: "Training Guides",
-    href: "YOUR_GOOGLE_DOC_URL",
-  },
-  {
-    name: "Department Forms",
-    href: "YOUR_GOOGLE_FORM_URL",
-  },
 ];
 
 export default function Navbar() {
@@ -86,6 +64,9 @@ export default function Navbar() {
     return pathname.startsWith(href);
   };
 
+  const departmentsActive =
+    pathname.startsWith("/departments");
+
   const closeMenus = () => {
     setMenuOpen(false);
     setDepartmentsOpen(false);
@@ -94,13 +75,17 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-container">
+
         {/* BRAND */}
+
         <Link
           href="/"
           className="navbar-brand"
           onClick={closeMenus}
         >
-          <div className="navbar-logo">B</div>
+          <div className="navbar-logo">
+            B
+          </div>
 
           <div className="navbar-brand-text">
             <strong>BEAR OPEN WORLD</strong>
@@ -108,121 +93,201 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* NAVIGATION */}
+
+        {/* DESKTOP / MOBILE NAVIGATION */}
+
         <nav
           className={`navbar-links ${
             menuOpen ? "mobile-open" : ""
           }`}
         >
+
+          {/* NORMAL NAVIGATION */}
+
           {navigation.slice(0, 2).map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className={isActive(item.href) ? "active" : ""}
+              className={
+                isActive(item.href)
+                  ? "active"
+                  : ""
+              }
               onClick={closeMenus}
             >
               {item.name}
             </Link>
           ))}
 
+
           {/* DEPARTMENTS DROPDOWN */}
+
           <div
             className={`navbar-dropdown ${
-              departmentsOpen ? "dropdown-open" : ""
+              departmentsActive
+                ? "active"
+                : ""
             }`}
           >
+
             <button
               type="button"
-              className={`navbar-dropdown-trigger ${
-                pathname.startsWith("/departments")
+              className={`navbar-dropdown-button ${
+                departmentsActive
                   ? "active"
                   : ""
               }`}
-              aria-expanded={departmentsOpen}
               onClick={() =>
-                setDepartmentsOpen(!departmentsOpen)
+                setDepartmentsOpen(
+                  !departmentsOpen
+                )
               }
+              aria-expanded={departmentsOpen}
             >
               Departments
-              <span className="dropdown-arrow">
-                {departmentsOpen ? "▲" : "▼"}
+
+              <span
+                className={`dropdown-arrow ${
+                  departmentsOpen
+                    ? "open"
+                    : ""
+                }`}
+              >
+                ▾
               </span>
             </button>
 
-            <div className="navbar-dropdown-menu">
+
+            {/* DROPDOWN MENU */}
+
+            <div
+              className={`departments-dropdown ${
+                departmentsOpen
+                  ? "show"
+                  : ""
+              }`}
+            >
+
               {/* VIEW ALL */}
+
               <Link
                 href="/departments"
-                className="dropdown-view-all"
+                className="department-view-all"
                 onClick={closeMenus}
               >
-                <span className="dropdown-item-icon">▦</span>
+                <div>
+                  <strong>
+                    View All Departments
+                  </strong>
 
-                <span>
-                  <strong>View All Departments</strong>
-                  <small>
-                    Explore all BOWRP departments
-                  </small>
+                  <span>
+                    Explore every KOD4BR department
+                  </span>
+                </div>
+
+                <span className="dropdown-icon">
+                  →
                 </span>
               </Link>
 
-              {/* DEPARTMENT SECTIONS */}
-              <div className="dropdown-sections">
-                {departmentSections.map((section) => (
-                  <div
-                    className="dropdown-section"
-                    key={section.title}
-                  >
-                    <p>{section.title}</p>
 
-                    {section.departments.map(
-                      (department) => (
+              <div className="dropdown-divider" />
+
+
+              {/* DEPARTMENTS */}
+
+              <div className="department-dropdown-list">
+
+                {departments.map(
+                  (department) => (
+                    <div
+                      className="department-dropdown-item"
+                      key={department.slug}
+                    >
+
+                      {/* DEPARTMENT NAME */}
+
+                      <Link
+                        href={`/departments/${department.slug}`}
+                        className="department-main-link"
+                        onClick={closeMenus}
+                      >
+                        <div className="department-name">
+                          <strong>
+                            {department.name}
+                          </strong>
+
+                          <span>
+                            {department.abbreviation}
+                          </span>
+                        </div>
+
+                        <span className="department-arrow">
+                          →
+                        </span>
+                      </Link>
+
+
+                      {/* SUB LINKS */}
+
+                      <div className="department-sub-links">
+
                         <Link
-                          key={department.href}
-                          href={department.href}
+                          href={`/departments/${department.slug}`}
                           onClick={closeMenus}
                         >
-                          {department.name}
+                          Department Page
                         </Link>
-                      )
-                    )}
-                  </div>
-                ))}
+
+                        <a
+                          href={department.documents}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Documents
+                        </a>
+
+                        <a
+                          href={department.forms}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Forms
+                        </a>
+
+                      </div>
+
+                    </div>
+                  )
+                )}
+
               </div>
 
-              {/* DOCUMENTS */}
-              <div className="dropdown-documents">
-                <p>DEPARTMENT DOCUMENTS</p>
-
-                <div className="dropdown-document-grid">
-                  {documentLinks.map((document) => (
-                    <Link
-                      key={document.href}
-                      href={document.href}
-                      onClick={closeMenus}
-                    >
-                      <span>↗</span>
-                      {document.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
             </div>
+
           </div>
 
-          {/* REMAINING NAVIGATION */}
+
+          {/* REST OF NAVIGATION */}
+
           {navigation.slice(2).map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className={isActive(item.href) ? "active" : ""}
+              className={
+                isActive(item.href)
+                  ? "active"
+                  : ""
+              }
               onClick={closeMenus}
             >
               {item.name}
             </Link>
           ))}
 
+
           {/* JOIN */}
+
           <Link
             href="/contact"
             className="navbar-join"
@@ -230,25 +295,30 @@ export default function Navbar() {
           >
             Join Us
           </Link>
+
         </nav>
 
+
         {/* MOBILE MENU BUTTON */}
+
         <button
           type="button"
           className={`navbar-menu-button ${
-            menuOpen ? "open" : ""
+            menuOpen
+              ? "open"
+              : ""
           }`}
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
-          onClick={() => {
-            setMenuOpen(!menuOpen);
-            setDepartmentsOpen(false);
-          }}
+          onClick={() =>
+            setMenuOpen(!menuOpen)
+          }
         >
           <span />
           <span />
           <span />
         </button>
+
       </div>
     </header>
   );
