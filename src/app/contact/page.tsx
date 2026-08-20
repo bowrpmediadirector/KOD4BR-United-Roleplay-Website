@@ -31,7 +31,11 @@ export default function ContactPage() {
               our official community Discord.
             </p>
 
-            <a href="#" className="button button-primary">
+            <a
+              href="https://discord.gg/KEUekpCVqD"
+              target="_blank"
+              rel="noopener noreferrer"
+              >
               Join Our Discord
             </a>
           </div>
