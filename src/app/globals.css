@@ -6197,3 +6197,1765 @@ h2 span {
 
   line-height: 1.2;
 }
+
+
+/* =========================================
+   KOD4BR UNITED CAD
+   WEBSITE-MATCHING DESIGN
+========================================= */
+
+.cad-shell {
+  min-height: calc(100vh - 78px);
+
+  display: flex;
+
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(215, 25, 32, 0.07),
+      transparent 32%
+    ),
+    var(--background);
+
+  color: var(--foreground);
+}
+
+
+/* =========================================
+   CAD SIDEBAR
+========================================= */
+
+.cad-sidebar {
+  width: 255px;
+  min-height: calc(100vh - 78px);
+
+  position: sticky;
+  top: 78px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 18px;
+
+  background:
+    rgba(5, 6, 8, 0.96);
+
+  border-right: 1px solid var(--border);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  z-index: 50;
+}
+
+
+/* BRAND */
+
+.cad-sidebar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+.cad-brand-icon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 6px;
+
+  background: var(--accent);
+
+  color: white;
+
+  font-size: 1.3rem;
+  font-weight: 900;
+
+  box-shadow:
+    0 8px 25px
+    rgba(215, 25, 32, 0.18);
+
+  transition: 0.2s ease;
+}
+
+.cad-sidebar-brand:hover
+.cad-brand-icon {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(215, 25, 32, 0.28);
+}
+
+.cad-brand-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.cad-brand-text strong {
+  font-size: 0.82rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.06em;
+}
+
+.cad-brand-text small {
+  margin-top: 5px;
+
+  color: var(--accent);
+
+  font-size: 0.57rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* DIVIDER */
+
+.cad-sidebar-divider {
+  height: 1px;
+
+  margin: 22px 0;
+
+  background: var(--border);
+}
+
+
+/* PANEL */
+
+.cad-panel-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  border-radius: 8px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border: 1px solid var(--border);
+}
+
+.cad-panel-icon {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 7px;
+
+  background:
+    rgba(215, 25, 32, 0.1);
+
+  border: 1px solid
+    rgba(215, 25, 32, 0.2);
+
+  font-size: 1.35rem;
+}
+
+.cad-panel-heading strong,
+.cad-panel-heading small {
+  display: block;
+}
+
+.cad-panel-heading strong {
+  font-size: 0.85rem;
+}
+
+.cad-panel-heading small {
+  margin-top: 5px;
+
+  color: var(--accent);
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* SECTION LABEL */
+
+.cad-sidebar-label {
+  margin: 25px 10px 8px;
+
+  color: #666c76;
+
+  font-size: 0.62rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* NAV */
+
+.cad-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.cad-sidebar-nav a {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  min-height: 43px;
+
+  padding: 10px 12px;
+
+  border-radius: 6px;
+
+  color: #9097a3;
+
+  font-size: 0.84rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cad-sidebar-nav a:hover {
+  color: white;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  transform: translateX(2px);
+}
+
+.cad-sidebar-nav a.active {
+  color: white;
+
+  background:
+    rgba(215, 25, 32, 0.1);
+
+  border-left:
+    2px solid var(--accent);
+
+  padding-left: 10px;
+}
+
+.cad-nav-icon {
+  width: 22px;
+
+  color: #747b87;
+
+  text-align: center;
+
+  font-size: 0.95rem;
+}
+
+.cad-sidebar-nav a.active
+.cad-nav-icon {
+  color: var(--accent);
+}
+
+
+/* SIDEBAR SPACER */
+
+.cad-sidebar-spacer {
+  flex: 1;
+}
+
+
+/* BACK */
+
+.cad-back {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid var(--border);
+
+  color: #777e89;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.cad-back:hover {
+  color: white;
+}
+
+.cad-back span {
+  color: var(--accent);
+}
+
+
+/* =========================================
+   MAIN CAD AREA
+========================================= */
+
+.cad-main {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 45px 45px 90px;
+}
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.cad-page-header,
+.cad-home-hero {
+  max-width: 1180px;
+
+  margin: 0 auto 45px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.cad-kicker {
+  margin-bottom: 14px;
+
+  color: var(--accent);
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+}
+
+.cad-page-header h1,
+.cad-home-hero h1 {
+  margin: 0;
+
+  font-size:
+    clamp(2.6rem, 5vw, 4.7rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+.cad-page-header p,
+.cad-home-hero p {
+  max-width: 650px;
+
+  margin: 22px 0 0;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.cad-status,
+.cad-live-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  white-space: nowrap;
+
+  padding: 9px 13px;
+
+  border-radius: 5px;
+
+  background:
+    rgba(34, 197, 94, 0.06);
+
+  border:
+    1px solid rgba(34, 197, 94, 0.2);
+
+  color: #b9c2cc;
+
+  font-size: 0.65rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+}
+
+.cad-status-dot {
+  width: 7px;
+  height: 7px;
+
+  margin-right: 8px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 10px
+    rgba(34, 197, 94, 0.65);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.cad-stats {
+  max-width: 1180px;
+
+  margin: 0 auto 55px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.cad-stat-card {
+  padding: 25px;
+
+  background: var(--card);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 10px;
+
+  transition: 0.2s ease;
+}
+
+.cad-stat-card:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(215, 25, 32, 0.35);
+}
+
+.cad-stat-card span {
+  display: block;
+
+  color: #727985;
+
+  font-size: 0.65rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.13em;
+}
+
+.cad-stat-card strong {
+  display: block;
+
+  margin-top: 10px;
+
+  color: white;
+
+  font-size: 2.3rem;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.cad-section {
+  max-width: 1180px;
+
+  margin:
+    0 auto 60px;
+}
+
+.cad-section-title {
+  margin-bottom: 25px;
+}
+
+.cad-section-title span {
+  color: var(--accent);
+
+  font-size: 0.68rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+}
+
+.cad-section-title h2 {
+  margin: 7px 0 0;
+
+  color: white;
+
+  font-size: 1.8rem;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================
+   FEATURE GRID
+========================================= */
+
+.cad-feature-grid,
+.cad-panel-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.cad-feature-card,
+.cad-panel-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 105px;
+
+  padding: 23px;
+
+  background: var(--card);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 10px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.cad-feature-card:hover,
+.cad-panel-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(215, 25, 32, 0.42);
+
+  background:
+    #151a22;
+
+  box-shadow:
+    0 18px 40px
+    rgba(0, 0, 0, 0.22);
+}
+
+.cad-feature-icon,
+.cad-panel-card-icon {
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 7px;
+
+  background:
+    rgba(215, 25, 32, 0.08);
+
+  border:
+    1px solid
+    rgba(215, 25, 32, 0.14);
+
+  font-size: 1.25rem;
+}
+
+.cad-feature-card strong {
+  display: block;
+
+  color: white;
+
+  font-size: 0.95rem;
+}
+
+.cad-feature-card p,
+.cad-panel-card p {
+  margin: 6px 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.78rem;
+
+  line-height: 1.55;
+}
+
+.cad-feature-arrow,
+.cad-panel-card-arrow {
+  margin-left: auto;
+
+  color: var(--accent);
+
+  font-size: 1.15rem;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.cad-feature-card:hover
+.cad-feature-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================
+   CAD HOME
+========================================= */
+
+.cad-home {
+  min-height:
+    calc(100vh - 78px);
+
+  padding:
+    70px 45px 90px;
+
+  background:
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(215, 25, 32, 0.1),
+      transparent 35%
+    ),
+    var(--background);
+
+  color: var(--foreground);
+}
+
+.cad-home-content {
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+.cad-home-hero {
+  max-width: none;
+
+  margin-bottom: 55px;
+}
+
+.cad-panel-card {
+  min-height: 230px;
+
+  display: block;
+}
+
+.cad-panel-card-content {
+  margin-top: 25px;
+}
+
+.cad-panel-card-content > span {
+  color: var(--accent);
+
+  font-size: 0.65rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.15em;
+}
+
+.cad-panel-card h3 {
+  margin: 8px 0 0;
+
+  color: white;
+
+  font-size: 1.35rem;
+}
+
+.cad-panel-card-arrow {
+  position: absolute;
+
+  right: 23px;
+
+  bottom: 20px;
+
+  font-size: 1.3rem;
+}
+
+.cad-home-footer {
+  max-width: 1180px;
+
+  margin: 45px auto 0;
+
+  padding-top: 22px;
+
+  border-top:
+    1px solid var(--border);
+}
+
+.cad-home-footer strong,
+.cad-home-footer span {
+  display: block;
+}
+
+.cad-home-footer span {
+  margin-top: 6px;
+
+  color: #666c76;
+
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+.cad-mobile-header {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+
+  .cad-feature-grid,
+  .cad-panel-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .cad-stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .cad-sidebar {
+    width: 220px;
+  }
+
+  .cad-main {
+    padding: 35px 25px 70px;
+  }
+
+  .cad-home {
+    padding:
+      55px 25px 70px;
+  }
+
+}
+
+@media (max-width: 750px) {
+
+  .cad-shell {
+    display: block;
+
+    min-height:
+      calc(100vh - 78px);
+  }
+
+  .cad-sidebar {
+    display: none;
+  }
+
+  .cad-main {
+    padding:
+      28px 18px 65px;
+  }
+
+  .cad-home {
+    padding:
+      40px 18px 65px;
+  }
+
+  .cad-mobile-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+  .cad-mobile-header a {
+    color: var(--accent);
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+  }
+
+  .cad-mobile-header span {
+    color: white;
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+  }
+
+  .cad-page-header,
+  .cad-home-hero {
+    display: block;
+
+    margin-bottom: 35px;
+  }
+
+  .cad-page-header h1,
+  .cad-home-hero h1 {
+    font-size: 3rem;
+  }
+
+  .cad-page-header p,
+  .cad-home-hero p {
+    font-size: 0.92rem;
+  }
+
+  .cad-status,
+  .cad-live-status {
+    margin-top: 20px;
+  }
+
+  .cad-feature-grid,
+  .cad-panel-grid,
+  .cad-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cad-section {
+    margin-bottom: 45px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .cad-page-header h1,
+  .cad-home-hero h1 {
+    font-size: 2.55rem;
+  }
+
+  .cad-feature-card {
+    padding: 18px;
+  }
+
+  .cad-stat-card {
+    padding: 20px;
+  }
+
+}
+/* =========================================================
+   KOD4BR STAFF CAD ADMINISTRATION
+   Clean website-matching administration UI
+========================================================= */
+
+.admin-page {
+  min-height: calc(100vh - 78px);
+  padding: 55px 20px 90px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.admin-container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.admin-back {
+  display: inline-flex;
+  margin-bottom: 30px;
+  color: var(--accent);
+  font-size: .82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.admin-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.admin-header h1 {
+  margin: 8px 0 0;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: .95;
+  letter-spacing: -.055em;
+}
+
+.admin-header p {
+  max-width: 700px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.admin-kicker {
+  color: var(--accent);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .17em;
+}
+
+.cad-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.cad-admin-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  min-height: 185px;
+  padding: 25px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    background .22s ease;
+}
+
+.cad-admin-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(215,25,32,.45);
+  background: #151a22;
+}
+
+.cad-admin-card-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(215,25,32,.08);
+  border: 1px solid rgba(215,25,32,.16);
+  font-size: 1.3rem;
+}
+
+.cad-admin-card-body {
+  min-width: 0;
+  padding-right: 15px;
+}
+
+.cad-admin-card h3,
+.cad-admin-wide-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.cad-admin-card p,
+.cad-admin-wide-card p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.65;
+}
+
+.cad-admin-card-arrow {
+  position: absolute;
+  right: 22px;
+  bottom: 19px;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.cad-admin-wide-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 115px;
+  padding: 25px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: none;
+  transition: .22s ease;
+}
+
+.cad-admin-wide-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(215,25,32,.45);
+}
+
+/* ADMIN SUBPAGES */
+
+.admin-form-card,
+.admin-table-card,
+.admin-settings-card,
+.admin-management-card,
+.admin-permission-list {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.admin-form-card {
+  padding: 28px;
+  margin-bottom: 25px;
+}
+
+.admin-form-card h2,
+.admin-table-header h2 {
+  margin: 5px 0 0;
+  font-size: 1.45rem;
+}
+
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.admin-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #aeb4bf;
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.admin-form-grid input,
+.admin-form-grid select,
+.admin-select {
+  min-height: 44px;
+  padding: 10px 12px;
+  background: #090c11;
+  color: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  font: inherit;
+}
+
+.admin-form-grid input:focus,
+.admin-form-grid select:focus,
+.admin-select:focus {
+  border-color: var(--accent);
+}
+
+.admin-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.admin-primary-button,
+.admin-secondary-button,
+.admin-row-button {
+  border-radius: 6px;
+  padding: 10px 16px;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.admin-primary-button {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+}
+
+.admin-primary-button:hover {
+  filter: brightness(1.1);
+}
+
+.admin-secondary-button,
+.admin-row-button {
+  background: rgba(255,255,255,.04);
+  border: 1px solid var(--border);
+  color: #fff;
+}
+
+.admin-secondary-button:hover,
+.admin-row-button:hover {
+  background: rgba(255,255,255,.08);
+}
+
+.admin-table-card {
+  overflow: hidden;
+}
+
+.admin-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-table-header > div > span {
+  color: var(--accent);
+  font-size: .65rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.admin-table-header > strong {
+  min-width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(215,25,32,.1);
+  color: var(--accent);
+}
+
+.admin-table-row,
+.admin-log-row {
+  display: grid;
+  grid-template-columns: 1.6fr .8fr .7fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-table-row:last-child,
+.admin-log-row:last-child {
+  border-bottom: 0;
+}
+
+.admin-table-row > div {
+  min-width: 0;
+}
+
+.admin-table-row strong,
+.admin-log-row strong {
+  display: block;
+  color: #fff;
+  font-size: .86rem;
+}
+
+.admin-table-row > div > span,
+.admin-log-row > div > span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.admin-role {
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.05);
+  color: #c3c8d0;
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.admin-status {
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.admin-status.active {
+  background: rgba(34,197,94,.1);
+  color: #65e69a;
+}
+
+.admin-status.disabled {
+  background: rgba(255,255,255,.06);
+  color: #888f9a;
+}
+
+.admin-log-time {
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.admin-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.admin-management-card {
+  position: relative;
+  min-height: 190px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.admin-management-icon {
+  font-size: 1.8rem;
+}
+
+.admin-management-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.admin-management-card > div > span {
+  display: block;
+  margin-top: 5px;
+  color: var(--accent);
+  font-size: .68rem;
+  font-weight: 900;
+}
+
+.admin-toggle {
+  width: fit-content;
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,.04);
+  color: #858c97;
+  font: inherit;
+  font-size: .68rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.admin-toggle.enabled {
+  background: rgba(215,25,32,.1);
+  border-color: rgba(215,25,32,.3);
+  color: #fff;
+}
+
+.admin-permission-list {
+  overflow: hidden;
+}
+
+.admin-permission-row,
+.admin-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 23px 25px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-permission-row:last-child,
+.admin-setting-row:last-child {
+  border-bottom: 0;
+}
+
+.admin-permission-row strong,
+.admin-setting-row strong {
+  display: block;
+  color: #fff;
+  font-size: .9rem;
+}
+
+.admin-permission-row p,
+.admin-setting-row p {
+  max-width: 650px;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.6;
+}
+
+.admin-settings-card {
+  overflow: hidden;
+}
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+  .cad-admin-grid,
+  .admin-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-page {
+    padding: 35px 15px 65px;
+  }
+
+  .admin-header {
+    display: block;
+  }
+
+  .admin-header h1 {
+    font-size: 3rem;
+  }
+
+  .cad-admin-grid,
+  .admin-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cad-admin-card {
+    min-height: 155px;
+  }
+
+  .admin-table-row,
+  .admin-log-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .admin-permission-row,
+  .admin-setting-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-form-actions {
+    flex-direction: column;
+  }
+
+  .admin-form-actions button {
+    width: 100%;
+  }
+}
+
+
+
+/* =========================================================
+   KOD4BR UNITED CAD - STAFF ADMINISTRATION
+========================================================= */
+
+.cad-shell {
+  min-height: calc(100vh - 78px);
+  display: flex;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.cad-sidebar {
+  width: 250px;
+  min-width: 250px;
+  min-height: calc(100vh - 78px);
+  display: flex;
+  flex-direction: column;
+  padding: 25px 16px;
+  background: var(--card);
+  border-right: 1px solid var(--border);
+}
+
+.cad-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.cad-brand-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.cad-sidebar-brand strong {
+  display: block;
+  font-size: .9rem;
+}
+
+.cad-sidebar-brand small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: .65rem;
+  letter-spacing: .12em;
+}
+
+.cad-panel-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 10px;
+}
+
+.cad-panel-icon {
+  font-size: 1.5rem;
+}
+
+.cad-panel-heading strong {
+  display: block;
+  color: #fff;
+  font-size: .85rem;
+}
+
+.cad-panel-heading small {
+  display: block;
+  margin-top: 3px;
+  color: var(--accent);
+  font-size: .62rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.cad-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cad-sidebar-nav a {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 12px;
+  border-radius: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .78rem;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.cad-sidebar-nav a:hover {
+  background: rgba(255,255,255,.04);
+  color: #fff;
+}
+
+.cad-sidebar-nav a.active {
+  background: rgba(215,25,32,.12);
+  color: #fff;
+  border-left: 3px solid var(--accent);
+}
+
+.cad-back {
+  margin-top: auto;
+  padding: 15px 10px 5px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.cad-back:hover {
+  color: var(--accent);
+}
+
+.cad-main {
+  flex: 1;
+  min-width: 0;
+  padding: 45px;
+  overflow-x: hidden;
+}
+
+.cad-mobile-header {
+  display: none;
+}
+
+.cad-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.cad-kicker {
+  color: var(--accent);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+}
+
+.cad-page-header h1 {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+
+.cad-page-header p {
+  max-width: 700px;
+  margin: 15px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.cad-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: #fff;
+  font-size: .65rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.cad-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34,197,94,.5);
+}
+
+.cad-section {
+  margin-top: 35px;
+}
+
+.cad-section-title {
+  margin-bottom: 18px;
+}
+
+.cad-section-title span {
+  display: block;
+  color: var(--accent);
+  font-size: .62rem;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.cad-section-title h2 {
+  margin: 5px 0 0;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* ADMINISTRATION */
+
+.cad-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.cad-admin-card {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  min-height: 175px;
+  padding: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.cad-admin-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(215,25,32,.5);
+}
+
+.cad-admin-card-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  display: grid;
+  place-items: center;
+  background: rgba(215,25,32,.1);
+  border: 1px solid rgba(215,25,32,.2);
+  border-radius: 8px;
+  font-size: 1.25rem;
+}
+
+.cad-admin-card-body {
+  padding-right: 15px;
+}
+
+.cad-admin-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: .95rem;
+}
+
+.cad-admin-card p {
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.65;
+}
+
+.cad-admin-card-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.cad-admin-wide-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 23px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cad-admin-wide-card:hover {
+  border-color: rgba(215,25,32,.5);
+}
+
+.cad-admin-wide-card h3 {
+  margin: 0;
+  color: #fff;
+  font-size: .95rem;
+}
+
+.cad-admin-wide-card p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: .76rem;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .cad-sidebar {
+    width: 220px;
+    min-width: 220px;
+  }
+
+  .cad-main {
+    padding: 30px;
+  }
+
+  .cad-admin-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .cad-shell {
+    display: block;
+  }
+
+  .cad-sidebar {
+    display: none;
+  }
+
+  .cad-main {
+    padding: 20px 15px 50px;
+  }
+
+  .cad-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cad-mobile-header a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: .75rem;
+    font-weight: 800;
+  }
+
+  .cad-mobile-header span {
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 800;
+  }
+
+  .cad-page-header {
+    display: block;
+  }
+
+  .cad-status {
+    margin-top: 20px;
+  }
+
+  .cad-admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

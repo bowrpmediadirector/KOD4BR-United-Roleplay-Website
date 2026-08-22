@@ -269,7 +269,6 @@ export default function Navbar() {
           </div>
 
 
-
           {/* REST OF NAVIGATION */}
 
           {navigation.slice(2).map((item) => (
